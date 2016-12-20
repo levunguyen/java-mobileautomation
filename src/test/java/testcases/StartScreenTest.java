@@ -6,8 +6,8 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features ="src/test/resources/features/registration/slashscreen.feature",
+@CucumberOptions(features ="src/test/resources/features/registration/startscreen.feature",
 					glue="mobileautomation.auto")
-public class SlashScreenTest {
+public class StartScreenTest {
 
 }

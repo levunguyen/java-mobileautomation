@@ -9,7 +9,7 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
-public class SlashScreenSteps extends ScenarioSteps {
+public class StartScreenSteps extends ScenarioSteps {
 
 	private AppiumDriverConfigure appiumDriver = AppiumDriverConfigure.getInstance();
 	
@@ -21,9 +21,8 @@ public class SlashScreenSteps extends ScenarioSteps {
 	}
 	
 	@Step
-	public void seeSlashScreen() {
+	public String seeSlashScreen() {
 		WebElement name = appiumDriver.getDriver().findElement(By.name("あなたの一歩が宝にかわる"));
-		System.out.println("TEXT " + name.getText());
-		
+		return name.getText();
 	}
 }
