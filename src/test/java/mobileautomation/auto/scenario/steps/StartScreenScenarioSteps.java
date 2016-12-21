@@ -19,12 +19,12 @@ public class StartScreenScenarioSteps {
 
 	@When("^I click on Mappion icon$")
 	public void i_click_on_Mappion_icon() throws Throwable {
-		
 		slashScreenStep.clickMappionIcon();
 	}
 
 	@Then("^I should see the start screen$")
 	public void i_should_see_the_Slashscreen() throws Throwable {
 		assertEquals("あなたの一歩が宝にかわる",slashScreenStep.seeSlashScreen());
+		//slashScreenStep.closeTestCase();
 	}
 }

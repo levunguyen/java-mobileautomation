@@ -17,12 +17,17 @@ public class StartScreenSteps extends ScenarioSteps {
 
 	@Step
 	public void clickMappionIcon() throws Exception {
-		AppiumDriverConfigure.setUp();
+		System.out.println("Accessing Application");
 	}
 	
 	@Step
 	public String seeSlashScreen() {
 		WebElement name = appiumDriver.getDriver().findElement(By.name("あなたの一歩が宝にかわる"));
 		return name.getText();
+	}
+	
+	@Step
+	public void closeTestCase() {
+		appiumDriver.getDriver().quit();
 	}
 }

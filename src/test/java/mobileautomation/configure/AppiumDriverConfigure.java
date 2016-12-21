@@ -14,17 +14,18 @@ public class AppiumDriverConfigure {
 
 	private static AppiumDriverConfigure instance = null;
 	
-	public static AppiumDriver driver;
+	private  AppiumDriver driver;
 	
 	public static AppiumDriverConfigure getInstance() {
 		if (instance == null) {
 			instance = new AppiumDriverConfigure();
+			instance.setDriver(instance.createDriver());
 		} 
 		return instance;
 	}
 	
 	
-	public static AppiumDriver setUp() throws Exception {
+	public AppiumDriver createDriver() {
 		
 		String apkpath = "//Users//nguyenle//Documents//app-dev-debug.apk";
 	    File app = new File (apkpath);
@@ -35,16 +36,22 @@ public class AppiumDriverConfigure {
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("deviceName", "LC52AYE47582");
 		capabilities.setCapability("platformVersion","4.4");
-		//capabilities.setCapability("appPackage", "com.lab.mapion");
-		//capabilities.setCapability("appActivity", "screen.splash.StartActivity");
 		capabilities.setCapability("app","/Users/nguyenle/Documents/mapion.apk");
+		try {
 		driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"),capabilities);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 		return driver;
 	}
 	
 
 	public AppiumDriver getDriver() {
 		return driver;
+	}
+	
+	public void setDriver(AppiumDriver driver) {
+		this.driver = driver;
 	}
 	
 	public static void tearDown() {
