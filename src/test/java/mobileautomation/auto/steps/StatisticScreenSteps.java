@@ -29,13 +29,14 @@ public class StatisticScreenSteps extends ScenarioSteps {
 	}
 
 	public void clickOnMonth() {
-
+		WebElement day = driver.findElement(By.name("月"));
+		day.click();
 	}
 
 	public void clickOnYear() {
 		WebElement month = driver.findElement(By.name("年"));
 		month.click();
-		
+
 	}
 
 	public void clickBackBnt() {
@@ -51,16 +52,15 @@ public class StatisticScreenSteps extends ScenarioSteps {
 	public void openSetting() {
 		WebElement settingBtn = driver.findElement(org.openqa.selenium.By.xpath(
 				"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[1]"));
-
 		settingBtn.click();
 
 	}
 
-	public void clickOnSreenLevelup() {	
+	public void clickOnSreenLevelup() {
 		WebElement levelUpScreen = driver.findElement(org.openqa.selenium.By.xpath(
 				"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]"));
 		levelUpScreen.click();
-		
+
 	}
 
 }

@@ -8,7 +8,7 @@ import mobileautomation.configure.AppiumDriverConfigure;
 import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.steps.ScenarioSteps;
 
-public class RequestScreenSteps extends ScenarioSteps {
+public class MissionScreenSteps extends ScenarioSteps {
 
 	private AppiumDriverConfigure appiumDriver = AppiumDriverConfigure.getInstance();
 	AppiumDriver driver = appiumDriver.getDriver();

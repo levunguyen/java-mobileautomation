@@ -5,26 +5,26 @@ import static org.junit.Assert.assertEquals;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import mobileautomation.auto.steps.RequestScreenSteps;
+import mobileautomation.auto.steps.MissionScreenSteps;
 import net.thucydides.core.annotations.Steps;
 
-public class RequestScreenScenarioSteps {
+public class MissionScreenScenarioSteps {
 
 	@Steps
-	RequestScreenSteps steps;
+	MissionScreenSteps steps;
 	
-	@Given("^I click on request list icon$")
+	@Given("^I click on mission list icon$")
 	public void clickOnRequestListIcon() {
 		steps.clickOnRequestListIcon();
 	}
 	
-	@Then("^I see the list of request$")
+	@Then("^I see the list of mission$")
 	public void seeThelistOfRequest() {
 		String actualResult = steps.seeTheListOfRequest();
 		assertEquals("ミッション",actualResult);
 	}
 	
-	@Given("^I scroll the request list") 
+	@Given("^I scroll the mission list") 
 	public void scrollRequestList() {
 		steps.scrollRequestList();
 	}

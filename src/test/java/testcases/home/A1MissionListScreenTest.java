@@ -6,8 +6,8 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features ="src/test/resources/features/home/request.feature",
+@CucumberOptions(features ="src/test/resources/features/home/mission.feature",
 					glue="mobileautomation.auto")
-public class A1RequestListScreenTest {
+public class A1MissionListScreenTest {
 
 }
