@@ -11,6 +11,11 @@ Feature: Static Screen
     When I click on 日
     When I click on 週
     When I click on 月
-    When I click on 月
-    When I click back button
+    When I click on 年
+    When I click hard back button
     Then I should go back to main app
+    
+  Scenario: Setting
+  	Given I click on setting
+  	When I click on screen levelup
+  	Then I am on home
