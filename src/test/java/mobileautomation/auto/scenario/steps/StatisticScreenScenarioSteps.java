@@ -61,6 +61,7 @@ public class StatisticScreenScenarioSteps {
 	
 	@Then("^I am on home$")
 	public void backToHome() {
-		
+		String actual = steps.seeCharacterOnMainScreen();
+		assertEquals("今日の歩数", actual);
 	}
 }
