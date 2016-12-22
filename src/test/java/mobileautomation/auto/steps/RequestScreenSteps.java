@@ -3,8 +3,6 @@ package mobileautomation.auto.steps;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 
-import com.gargoylesoftware.htmlunit.javascript.host.Console;
-
 import io.appium.java_client.AppiumDriver;
 import mobileautomation.configure.AppiumDriverConfigure;
 import net.serenitybdd.core.annotations.findby.By;
@@ -35,7 +33,7 @@ public class RequestScreenSteps extends ScenarioSteps {
 		Double screenHeightEnd = dimensions.getHeight() * 0.1;
 		int scrollEnd = screenHeightEnd.intValue();
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 2; i++) {
 			try {
 				Thread.sleep(1000);
 				driver.swipe(0, scrollStart, 0, scrollEnd, 1000);

@@ -1,7 +1,5 @@
 package mobileautomation.auto.steps;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.openqa.selenium.WebElement;
 
 import mobileautomation.configure.AppiumDriverConfigure;
