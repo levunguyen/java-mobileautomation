@@ -6,8 +6,8 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 //@RunWith(CucumberWithSerenity.class)
-//@CucumberOptions(features ="src/test/resources/features/introduce/startscreen.feature",
+//@CucumberOptions(features ="src/test/resources/features/register/registerscreen.feature",
 //					glue="mobileautomation.auto")
-public class A0StartScreenTest {
+public class A2RegisterScreenTest {
 
 }

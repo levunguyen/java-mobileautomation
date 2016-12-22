@@ -7,8 +7,7 @@ Feature: Register
   I want to see the introduce screen
 
   Scenario: Register
-    Given I am on the registor screen one
-    When I click on continue button on screen one
+    Given I am on the registor screen
     And I enter name
     And I enter birthday
     And I enter sexual
@@ -16,4 +15,4 @@ Feature: Register
     And I enter height
     And I enter kg
     And I click register
-    Then I should see the introduce screen
+    Then I should get successfull message
