@@ -17,9 +17,24 @@ public class RequestScreenSteps extends ScenarioSteps {
 	}
 
 	public String seeRequests() {
-		//住民コレクション
 		WebElement requestLabel = driver.findElement(By.name("依頼リスト"));
 		return requestLabel.getText();
+	}
+
+	public void openRequestCollection() {
+		WebElement requestCollection = driver.findElement(By.name("住民コレクション"));
+		requestCollection.click();
+		//
+	}
+
+	public String seeCollectionList() {
+		WebElement collectionList = driver.findElement(By.name("住民遭遇数"));
+		return collectionList.getText();
+	}
+
+	public void returnMyHomePage() {
+		driver.navigate().back();
+		
 	}
 	
 	

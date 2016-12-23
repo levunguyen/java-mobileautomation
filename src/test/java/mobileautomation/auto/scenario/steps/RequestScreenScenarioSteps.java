@@ -22,4 +22,20 @@ public class RequestScreenScenarioSteps {
 		String actual = steps.seeRequests();
 		assertEquals("依頼リスト",actual);
 	}
+	
+	@Given("^I click on request collection")
+	public void openRequestCollection() {
+		steps.openRequestCollection();
+	}
+	
+	@Then("^I see the list of collection")
+	public void seeCollectionList(){
+		String actual = steps.seeCollectionList();
+		assertEquals("住民遭遇数",actual);
+	}
+	
+	@Then("^I return my home")
+	public void returnMyHomePage() {
+		steps.returnMyHomePage();
+	}
 }
