@@ -14,6 +14,7 @@ public class MissionScreenSteps extends ScenarioSteps {
 	AppiumDriver driver = appiumDriver.getDriver();
 
 	public void clickOnRequestListIcon() {
+		
 		WebElement requestListBnt = driver.findElement(By.xpath(
 				"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]"));
 		requestListBnt.click();
@@ -33,24 +34,19 @@ public class MissionScreenSteps extends ScenarioSteps {
 		Double screenHeightEnd = dimensions.getHeight() * 0.1;
 		int scrollEnd = screenHeightEnd.intValue();
 
-		for (int i = 0; i < 2; i++) {
-			try {
-				Thread.sleep(1000);
+		for (int i = 0; i < 10; i++) {
+		//	try {
+				//Thread.sleep(1000);
 				driver.swipe(0, scrollStart, 0, scrollEnd, 1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}			
-//			if (!driver.findElements(By.name("レベルをあげよう!")).isEmpty()) {
-//				System.out.println("Da Vao day");
-//				break;
-//			}
+		//	} catch (InterruptedException e) {
+				//e.printStackTrace();
+	//		}			
+
 		}
 	}
 
 	public void exitRequestList() {
-		WebElement requestBackBnt = driver.findElement(By.xpath(
-				"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]"));
-		requestBackBnt.click();
+		driver.navigate().back();
 	}
 
 	public String seeCharacterOnMainScreen() {

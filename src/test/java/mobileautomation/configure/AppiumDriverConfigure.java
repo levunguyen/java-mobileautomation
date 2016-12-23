@@ -32,9 +32,9 @@ public class AppiumDriverConfigure {
 	    
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		
-		capabilities.setCapability("appium-version", "1.4.0");
+		capabilities.setCapability("appium-version", "1.4.8");
 		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("deviceName", "LC52AYE47582");
+		capabilities.setCapability("deviceName", "192.168.56.101:5555");
 		capabilities.setCapability("platformVersion","4.4");
 		capabilities.setCapability("app","/Users/nguyenle/Documents/mapion.apk");
 		try {

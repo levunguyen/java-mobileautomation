@@ -65,7 +65,7 @@ public class IntroduceScreenSteps extends ScenarioSteps {
 //		// driver.swipe(startx, endy, startx, starty, 100000);
 //		// Thread.sleep(2000);
 
-		WebDriverWait wait = new WebDriverWait(driver,10000);
+		WebDriverWait wait = new WebDriverWait(driver,1000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("同意する")));
         driver.findElement(By.name("同意する")).click();
       
